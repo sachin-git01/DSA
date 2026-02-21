@@ -22,7 +22,38 @@ class Solution {
     }
       
       return res; 
+
+
+
+
+
+        // best tc
+
+
+
+
+        class Solution {
+    public char getMaxOccuringChar(String s) {
+        // code here
+    int fre[]=new int[26];
+    for(char c : s.toCharArray()){
+        fre[(c-'a')]++; //freq is counted
+    }
+    int maxfre=0;
+    for(int maxx :fre){
+        maxfre=Math.max(maxx,maxfre);
+        // max fre
+    }
     
+    for(int i=0;i<26;i++){
+        if(fre[i]==maxfre){
+            return (char)(i+'a');
+        }
+    }
+      return 'a';
+      
+    }
+}
     
         
     }
