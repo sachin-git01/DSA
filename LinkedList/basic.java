@@ -131,3 +131,43 @@ public class basic {
 // 3️⃣ If you try to do a.val or a.next, you get:
 
 // NullPointerException
+
+
+
+
+//get a value in ll;
+   private static int get(Node head,int idx){
+    Node temp=head;
+    for(int i=0;i<idx;i++){
+        temp=temp.next;
+
+    }
+    return temp.val;
+   }
+
+
+// add in tail in ll
+
+void addAtTail(int val){
+    Node temp = new Node(val);
+
+    if(tail == null)
+        head = tail = temp;
+    else{
+        tail.next = temp;
+        tail = temp;
+    }
+}
+
+// add in first in a ll
+void addAtFirst(int val){
+    Node temp = new Node(val);
+
+    // if list is empty
+    if(head == null){
+        head = tail = temp;
+    } else {
+        temp.next = head;
+        head = temp;
+    }
+}
