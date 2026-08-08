@@ -5,12 +5,13 @@ class Solution {
              int smallest=i;
              for(int j=i+1;j<arr.length;j++){
                  if(arr[j]<arr[smallest]){
-                  int temp=arr[j];
-                  arr[j]=arr[smallest];
-                  arr[smallest]=temp;
+                    smallest=j;
                   
                  }
              }
+               int temp=arr[i];
+                  arr[i]=arr[smallest];
+                  arr[smallest]=temp;
              
          }
     }
